@@ -1,0 +1,4 @@
+- Domain.
+- Business rules in a domain
+- State Machine Design Pattern https://refactoring.guru/design-patterns/state
+- Use Cases (Application)
