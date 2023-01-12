@@ -1,4 +1,5 @@
 class Inventory {
+    val id;
     val product;
     val stock;
 
