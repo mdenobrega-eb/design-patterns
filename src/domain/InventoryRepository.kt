@@ -1,3 +1,7 @@
+package designpatterns.domain
+
+import designpatterns.domain.Inventory as InventoryDomain
+
 /***
 Repository Pattern:
 mediates between the domain and the data mapping layers using a collection-like interface for accessing the domain objects
@@ -6,7 +10,7 @@ mediates between the domain and the data mapping layers using a collection-like 
  Contracts in domain are implemented in infrastructure.
 */
 interface InventoryRepository {
-    fun findById(id: String);
+    fun findById(id: String): InventoryDomain?
 
-    fun save(inventory: Inventory);
+    fun save(inventory: InventoryDomain)
 }
