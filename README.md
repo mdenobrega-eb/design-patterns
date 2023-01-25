@@ -1,5 +1,5 @@
-Domain-Driven Development
-=========================
+Domain-Driven Design
+====================
 
 ### Project Structure
 
