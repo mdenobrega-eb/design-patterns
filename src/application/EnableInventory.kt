@@ -2,15 +2,17 @@ package designpatterns.application
 
 import designpatterns.domain.InventoryNotFound
 import designpatterns.domain.InventoryRepository
+import designpatterns.domain.PaymentMethod
 import designpatterns.domain.state.ActiveState
 
 /**
  * This Use Case will enable Inventory
  */
 
-class EnableInventory private constructor() {
+class EnableInventory private constructor(): BaseUseCase {
     companion object {
         private lateinit var inventoryRepository: InventoryRepository
+        private lateinit var PaymentMethod: PaymentMethod
 
         operator fun invoke(id: String) {
 
@@ -26,6 +28,8 @@ class EnableInventory private constructor() {
 
             // Persist the mutated object
             inventoryRepository.save(inventoryDomain)
+
+            PaymentMethod.charge(inventoryDomain.amount)
         }
     }
 }

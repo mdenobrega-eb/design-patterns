@@ -1,3 +1,5 @@
 package designpatterns.infrastructure.persistence.InMemory
 
-class InMemoryBase
+import designpatterns.domain.InventoryRepository
+
+class InMemoryBase: InventoryRepository

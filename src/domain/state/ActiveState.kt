@@ -16,4 +16,8 @@ class ActiveState(inventory: InventoryDomain) : InventoryState(inventory) {
         // Mutate the domain through their methods
         inventory.addStock(amount)
     }
+
+    fun charge() {
+
+    }
 }
